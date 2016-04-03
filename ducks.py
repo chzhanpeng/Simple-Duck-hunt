@@ -24,7 +24,7 @@ class Duck:
 		
 	#when duck dies
 	def die(self):
-		self.color = [255, 0, 0]
+		self.color = RED
 		
 	#check if duck is on screen	
 	def onScreen(self):
