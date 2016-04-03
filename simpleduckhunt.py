@@ -1,6 +1,9 @@
 #Import the gaming library: pygame
 import pygame
 
+#Import all classes from the duckhuntgame module
+from duckhuntgame import *
+
 #Initialize pygame objects.
 pygame.init()
 
