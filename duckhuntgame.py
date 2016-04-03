@@ -56,9 +56,14 @@ class Game:
 	#receiving shotting location from Player
 	def getInputs(self):
 	
+		#Go over events.
 		for event in pygame.event.get():
+		
+			#Event handling to quit game.
 			if(event.type == pygame.QUIT):
 				self.end = True
+				
+			#Mouse event handling.
 			if(event.type == pygame.MOUSEBUTTONDOWN):
 				pass
 	
