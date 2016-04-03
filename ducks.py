@@ -1,8 +1,6 @@
 #This module contains all duck classes.
-
 #RGBA color definitions.
-YELLOW = (255,255,0, 255)
-RED = (255,0,0, 255)
+import mycolors
 
 class Duck:
 	
@@ -17,14 +15,14 @@ class Duck:
 		
 		self.window = window
 		
-		self.color = YELLOW
+		self.color = mycolors.YELLOW
 	#draw duck  
 	def beDrawn(self):
 		self.window.fill(self.color, rect = [self.x-self.width//2, self.y-self.height//2, self.width, self.height])
 		
 	#when duck dies
 	def die(self):
-		self.color = RED
+		self.color = mycolors.RED
 		
 	#check if duck is on screen	
 	def onScreen(self):

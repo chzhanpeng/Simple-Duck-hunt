@@ -2,15 +2,19 @@
 
 #Import the player classes.
 from duckhuntplayers import *
+
 #Import ducks
 from ducks import *
+
+#Import mycolors.
+import mycolors
 
 #Importing pygame.
 import pygame
 
 class Game:
 	
-	def __init__(self, info):
+	def __init__(self):
 	
 		#Give this game a list of players to pick from.
 		self.players = {"P1": InteractivePlayer(), "R": Robot()}
@@ -18,13 +22,19 @@ class Game:
 		
 		#Create clock to manage fps.
 		self.clock = pygame.time.Clock()
+		#Create info object for screen resolution and other info.
+		self.info = pygame.display.Info()
 		
+		#Ducks list.
 		self.ducks = []
 		
+		#Flag to keep game going.
 		self.end = False
 		
-		self.window = pygame.display.set_mode((info.current_w, info.current_h))
+		#Window for displaying stuff.
+		self.window = pygame.display.set_mode((self.info.current_w, self.info.current_h))
 		
+		#Create the ducks for this game.
 		self.makeDucks(3)
 	
 	def makeDucks(self, how_many):
@@ -33,7 +43,7 @@ class Game:
 	
 	def render_Objects(self):
 	
-		self.window.fill([173,216,230])
+		self.window.fill(mycolors.LIGHT_BLUE)
 	
 		for duck in self.ducks:
 			duck.beDrawn()
@@ -58,8 +68,8 @@ class Game:
 		
 	#check if duck is shot
 	def check_hit_duck(self, location):
-		YELLOW = [250, 250, 0, 255]
-		if self.window.get_at(location) == YELLOW:
+	
+		if self.window.get_at(location) == mycolors.YELLOW:
 			return True
 		else:
 			return False
