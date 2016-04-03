@@ -56,7 +56,7 @@ class Game:
 	#receiving shotting location from Player
 	def getInputs(self):
 	
-		#Go over events.
+		#Go over events for event handling.
 		for event in pygame.event.get():
 		
 			#Event handling to quit game.
