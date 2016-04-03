@@ -1,8 +1,16 @@
 #This is the module which will hold game classes and their respective helping classes.
 
+#Import the player classes.
+from duckhuntplayers import *
+#Import ducks
+from ducks import *
+
+#Importing pygame.
+import pygame
+
 class Game:
 	
-	def __init__(self):
+	def __init__(self, info):
 	
 		#Give this game a list of players to pick from.
 		self.players = {"P1": InteractivePlayer(), "R": Robot()}
