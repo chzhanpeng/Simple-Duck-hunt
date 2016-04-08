@@ -8,7 +8,8 @@ from ducks import *
 
 #Import mycolors.
 import mycolors
-
+#import HUD
+from HUD import *
 #Importing pygame.
 import pygame
 
@@ -44,7 +45,7 @@ class Game:
 	def render_Objects(self):
 	
 		self.window.fill(mycolors.LIGHT_BLUE)
-	
+		
 		for duck in self.ducks:
 			duck.beDrawn()
 			
