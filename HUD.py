@@ -13,7 +13,7 @@ class HUD:
 		screen_text = font.render(msg, True, color)
 		self.window.blit(screen_text, where)
 		
-	def drawBullet(self):
+	def showBullets(self):
 		self.window.fill(mycolors.BLACK , rect=[self.width * 0.1, self.height * 0.9, self.width * 0.1, self.height * 0.05])	
 		self.msg_to_screen("SHOT", mycolors.light_blue, [self.width*0.1, self.height*0.95])
 		gray = (120, 112, 140,255)
