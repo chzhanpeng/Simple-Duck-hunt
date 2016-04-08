@@ -45,7 +45,7 @@ class Game:
 	def render_Objects(self):
 	
 		self.window.fill(mycolors.LIGHT_BLUE)
-		
+		HUD.drawBullet()
 		for duck in self.ducks:
 			duck.beDrawn()
 			
